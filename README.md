@@ -1,137 +1,130 @@
-# 🎬 Netflix Clone Projects
+# 🎬 Netflix Clone
 
-This repository contains **two versions of a Netflix-inspired streaming interface**, built at different stages of the frontend learning journey.
+A Netflix-inspired streaming platform UI built with **Next.js, React, and Tailwind CSS**. This project focuses on reusable components, App Router architecture, dynamic routing, search, movie details, and client-side My List functionality.
 
-> **Note:** These are learning/portfolio projects inspired by Netflix. They are not affiliated with or endorsed by Netflix, Inc.
+> This project is for educational and portfolio purposes and is not affiliated with or endorsed by Netflix, Inc.
 
-## 📌 Projects
+## 🚀 Features
 
-### 1. Netflix Clone — HTML, CSS & JavaScript
-
-A vanilla frontend implementation built without a framework. It focuses on recreating the Netflix-style UI and practicing core frontend fundamentals.
-
-**Tech Stack**
-- HTML5
-- CSS3
-- Vanilla JavaScript
-
-**Project files**
-```text
-netflix clone/
-├── index.html
-├── style.css
-└── script.js
-```
-
-**How to run**
-
-Open `netflix clone/index.html` directly in a browser, or use a local development server such as VS Code Live Server.
-
----
-
-### 2. Netflix Clone — Next.js / React
-
-A more advanced version of the project rebuilt with **Next.js, React, Tailwind CSS, and reusable components**.
-
-The application recreates a modern streaming-platform browsing experience with dynamic category pages, search, movie details, and a persistent My List.
-
-**Tech Stack**
-- **Next.js 14.2.3** — React framework and App Router
-- **React 18** — component-based UI
-- **Tailwind CSS 3.4** — responsive styling
-- **JavaScript / JSX**
-- **Lucide React** — icons
-- **localStorage** — My List persistence
-
-**Features**
 - 🎥 Netflix-style home page with hero banner and movie rows
-- 🔥 Trending, Top Rated, Originals, Action, Comedy, and Horror sections
-- 🗂️ Dynamic category browsing routes
+- 🔥 Multiple movie categories including Trending, Top Rated, Originals, Action, Comedy, and Horror
 - 🔎 Movie search
-- 🎞️ Movie details modal
+- 🎞️ Movie details
+- 🗂️ Dynamic category routes
 - ➕ Add/remove movies from **My List**
 - 💾 My List persistence using browser `localStorage`
-- 📱 Responsive design for mobile, tablet, and desktop
+- 📱 Responsive design
 - 🧩 Reusable React components
-- ⚡ Next.js App Router architecture
+- ⚡ Next.js App Router
+- 🎨 Tailwind CSS styling
+- ⏳ Loading and error states
 
-**Project structure**
+## 🛠️ Tech Stack
+
+| Technology | Purpose |
+|---|---|
+| **Next.js 14** | React framework & App Router |
+| **React 18** | UI development |
+| **Tailwind CSS 3** | Styling & responsive design |
+| **JavaScript / JSX** | Application logic |
+| **Lucide React** | Icons |
+| **localStorage** | My List persistence |
+
+## 📁 Project Structure
+
 ```text
-netflix clone/
-└── netflix-clone-nextjs/
-    ├── app/
-    │   ├── browse/[category]/
-    │   ├── movie/
-    │   ├── mylist/
-    │   ├── search/
-    │   ├── page.jsx
-    │   ├── layout.jsx
-    │   └── globals.css
-    ├── components/
-    ├── context/
-    ├── hooks/
-    ├── lib/
-    ├── next.config.mjs
-    ├── tailwind.config.js
-    └── package.json
+netflixclone/
+├── app/
+│   ├── browse/[category]/
+│   ├── movie/[id]/
+│   ├── mylist/
+│   ├── search/
+│   ├── page.jsx
+│   ├── layout.jsx
+│   ├── loading.jsx
+│   ├── error.jsx
+│   └── globals.css
+├── components/
+│   ├── Banner.jsx
+│   ├── Navbar.jsx
+│   ├── Row.jsx
+│   ├── MovieModal.jsx
+│   ├── Skeleton.jsx
+│   └── Footer.jsx
+├── context/
+│   └── MyListContext.jsx
+├── hooks/
+│   ├── useDebounce.js
+│   └── useLocalStorage.js
+├── lib/
+│   └── mockData.js
+├── next.config.mjs
+├── tailwind.config.js
+├── postcss.config.js
+└── package.json
 ```
 
-**How to run**
+## ⚙️ Getting Started
+
+### 1. Clone the repository
 
 ```bash
-cd "netflix clone/netflix-clone-nextjs"
+git clone https://github.com/anmolmishra3019/netflixclone.git
+cd netflixclone
+```
+
+### 2. Install dependencies
+
+```bash
 npm install
+```
+
+### 3. Start the development server
+
+```bash
 npm run dev
 ```
 
-Then open **http://localhost:3000**.
+Open **http://localhost:3000** in your browser.
 
-For a production build:
+### 4. Production build
 
 ```bash
 npm run build
 npm run start
 ```
 
-## 🔄 Project Progression
-
-The two projects show the progression from **core frontend development to a modern React/Next.js architecture**:
-
-| Version | Technologies | Main Focus |
-|---|---|---|
-| Vanilla Netflix Clone | HTML, CSS, JavaScript | Frontend fundamentals, DOM manipulation, styling, interactions |
-| Next.js Netflix Clone | Next.js, React, Tailwind CSS | Component architecture, routing, state management, responsive UI |
-
 ## 🧠 What I Practiced
 
-### Vanilla Version
-- Semantic HTML structure
-- CSS layouts and responsive styling
-- JavaScript DOM manipulation
-- Event handling
-- Interactive UI behaviour
-
-### Next.js Version
+- React component-based architecture
 - Next.js App Router
-- React component architecture
-- Dynamic routes
+- Dynamic routing
 - React Context API
 - Client-side state management
+- Custom React hooks
 - Browser localStorage
+- Responsive UI development
 - Reusable UI components
-- Responsive layouts with Tailwind CSS
+- Loading and error handling
+- Organizing a scalable frontend project structure
 
 ## 🔮 Future Improvements
 
-- Integrate a real movie API such as TMDB
-- Add authentication
-- Add a backend/database for user-specific data
-- Add real movie and trailer playback
-- Improve search and filtering
-- Deploy the application with a live demo
+- [ ] Integrate the TMDB API for live movie data
+- [ ] Replace mock movie data with API responses
+- [ ] Add authentication
+- [ ] Add a backend/database for user-specific data
+- [ ] Add trailer playback
+- [ ] Improve search and filtering
+- [ ] Deploy with Vercel
+- [ ] Add a live demo and project screenshots
 
 ## 👨‍💻 Author
 
 **Anmol Mishra**
 
-GitHub: [@anmolmishra3019](https://github.com/anmolmishra3019)
+- GitHub: [@anmolmishra3019](https://github.com/anmolmishra3019)
+
+---
+
+⭐ If you find this project useful, consider giving it a star.
